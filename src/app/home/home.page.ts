@@ -9,4 +9,8 @@ export class HomePage {
 
   constructor() {}
 
+  nextPage() {
+    console.log('Testing Function');
+  }
+
 }
