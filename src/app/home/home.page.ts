@@ -13,11 +13,6 @@ import { Component } from '@angular/core';
   </ion-header>
 
   <ion-content [fullscreen]="true">
-    <ion-header collapse="condense">
-      <ion-toolbar>
-        <ion-title size="large">Blank</ion-title>
-      </ion-toolbar>
-    </ion-header>
     <div id="bg"></div>
     <div id="container">
       <strong>Ready to create an app?</strong>
@@ -28,6 +23,7 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  userName = 'Michael Kunchal';
   testVar = 0;
 
   constructor() {}
