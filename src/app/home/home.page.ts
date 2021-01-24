@@ -6,8 +6,13 @@ import { ToastController } from '@ionic/angular'
   template: `
   <ion-header [translucent]="true">
     <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button auto-hide="false"></ion-menu-button>
+      </ion-buttons>
       <ion-buttons slot="end">
-        <img id="right-bar-icon" src="assets/nfc-link-icon/nfc-icon.png" (click)="nextPage()">
+        <ion-button>
+          <ion-icon slot="icon-only" name="magnet-sharp"></ion-icon>
+        </ion-button>
       </ion-buttons>
     </ion-toolbar>
   </ion-header>

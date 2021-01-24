@@ -1,27 +1,17 @@
 <ion-list [ngSwitch]="type">
-  <div *ngSwitchCase="0">
+  <div id="sendContainer" *ngSwitchCase="0">
     <ion-list-header>
-      Connect Social Medias
+      Send Files and Photos
     </ion-list-header>
   
     <ion-item>
       <ion-grid>
         <ion-row>
           <ion-col>
-            <ion-avatar slot="start">
-              <!--PUT SOCIAL MEDIA LOGOS HERE-->
-              <ion-icon name="logo-facebook"></ion-icon>
-            </ion-avatar>
+            <ion-icon name="images-sharp"></ion-icon>
           </ion-col>
           <ion-col>
-            <ion-avatar slot="start">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </ion-avatar>
-          </ion-col>
-          <ion-col>
-            <ion-avatar slot="start">
-              <img src="assets/profile-picture/profile-picture.png">
-            </ion-avatar>
+            <ion-icon name="documents-sharp"></ion-icon>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -29,7 +19,7 @@
   </div>
   <div *ngSwitchCase="1">
     <ion-list-header>
-      Send Files and Photos
+      Connect Social Medias
     </ion-list-header>
   
     <ion-item>
@@ -38,9 +28,9 @@
         <img src="assets/profile-picture/profile-picture.png">
       </ion-avatar>
       <ion-label>
-        <h2>Finn</h2>
-        <h3>I'm a big deal</h3>
-        <p>Listen, I've had a pretty messed up day...</p>
+        <h2>Instagram</h2>
+        <h3>Status: Not Connected | Connected This is Username</h3>
+        <p>Instagram Link Here</p>
       </ion-label>
     </ion-item>
   
@@ -49,9 +39,9 @@
         <img src="assets/profile-picture/profile-picture.png">
       </ion-avatar>
       <ion-label>
-        <h2>Han</h2>
-        <h3>Look, kid...</h3>
-        <p>I've got enough on my plate as it is, and I...</p>
+        <h2>Twitter</h2>
+        <h3>Status: Not Connected</h3>
+        <p>Twitter Link Here</p>
       </ion-label>
     </ion-item>
   </div>
