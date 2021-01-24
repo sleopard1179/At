@@ -7,6 +7,7 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import { CardsComponent } from '../cards/cards.component';
 import { FabsComponent } from '../fabs/fabs.component';
+import { ListsComponent } from '../lists/lists.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { FabsComponent } from '../fabs/fabs.component';
   declarations: [
     HomePage,
     CardsComponent,
-    FabsComponent
+    FabsComponent,
+    ListsComponent
   ]
 })
 export class HomePageModule {}

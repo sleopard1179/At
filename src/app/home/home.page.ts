@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { ToastController } from '@ionic/angular'
 @Component({
   selector: 'app-home',
   styleUrls: ['home.page.scss'],
@@ -15,10 +15,11 @@ import { Component } from '@angular/core';
   <ion-content [fullscreen]="true">
     <div id="bg"></div>
     <div id="container">
-      <app-cards [isHomeScreen]="true"></app-cards>
+      <app-cards [type]="0"></app-cards>
       <!--<strong>Ready to create an app?</strong>
       <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p> -->
-      <app-cards [isHomeScreen]="false"></app-cards>
+      <app-cards [type]="1"></app-cards>
+      <app-cards [type]="2"></app-cards>
     </div>
     <app-fabs></app-fabs>
   </ion-content>
