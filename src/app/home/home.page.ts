@@ -23,7 +23,7 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  userName = 'Michael Kunchal';
+
   testVar = 0;
 
   constructor() {}
