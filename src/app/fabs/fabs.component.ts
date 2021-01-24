@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
   <ion-fab horizontal="end" vertical="bottom" slot="fixed">
     <ion-fab-button color="light">
-      <ion-icon md="caret-back" ios="chevron-up-circle-outline"></ion-icon>
+      <ion-icon md="caret-up" ios="chevron-up-circle-outline"></ion-icon>
     </ion-fab-button>
     <ion-fab-list side="top">
       <ion-fab-button color="light">
