@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
   template: `
   <ion-fab horizontal="end" vertical="bottom" slot="fixed">
     <ion-fab-button color="light">
-      <ion-icon md="caret-back" ios="chevron-back-circle-outline"></ion-icon>
+      <ion-icon md="caret-back" ios="chevron-up-circle-outline"></ion-icon>
     </ion-fab-button>
-    <ion-fab-list side="start">
+    <ion-fab-list side="top">
       <ion-fab-button color="light">
         <ion-icon name="logo-facebook"></ion-icon>
       </ion-fab-button>
