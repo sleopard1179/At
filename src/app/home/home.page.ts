@@ -15,14 +15,15 @@ import { Component } from '@angular/core';
   <ion-content [fullscreen]="true">
     <div id="bg"></div>
     <div id="container">
-      <strong>Ready to create an app?</strong>
-      <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+      <app-cards [isHomeScreen]="true"></app-cards>
+      <!--<strong>Ready to create an app?</strong>
+      <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p> -->
     </div>
+    <app-fabs></app-fabs>
   </ion-content>
   `
 })
 export class HomePage {
-
 
   testVar = 0;
 
