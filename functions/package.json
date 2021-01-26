@@ -14,7 +14,9 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
+    "device-uuid": "^1.0.4",
     "express": "^4.17.1",
+    "firebase": "^8.2.4",
     "firebase-admin": "^8.13.0",
     "firebase-functions": "^3.3.0",
     "jshint": "^2.12.0",
