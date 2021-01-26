@@ -26,7 +26,6 @@ const firebaseConfig = {
 // });
 // Setting Key Variables
 const api = express();
-admin.initializeApp(functions.config().firebase);
 firebase.initializeApp(firebaseConfig)
 api.disable('etag');
 api.set('trust proxy', true);
