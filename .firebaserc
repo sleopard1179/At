@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "at-me-app"
+  },
+  "targets": {
+    "at-me-app": {
+      "hosting": {
+        "app": [
+          "at-me-app"
+        ]
+      }
+    }
   }
 }
