@@ -12,23 +12,24 @@ ion-list-header {
 #sendContainer {
     align-items: center;
     text-align: center;
+    background-color: transparent;
 }
 
 ion-list {
-    background-color: rgba(248,248,255,0.80) !important;
+    background-color: transparent;
 }
 ion-item {
-    background-color: rgba(248,248,255,0.80) !important;
+    background-color: transparent;
 }
 div {
-    background-color: rgba(248,248,255,0.80) !important;
+    background-color: transparent;
 }
 ion-grid {
-    background-color: rgba(248,248,255,0.80) !important;
+    background-color: transparent;
 }
 ion-row {
-    background-color: rgba(248,248,255,0.80) !important;
+    background-color: transparent;
 }
 ion-col {
-    background-color: rgba(248,248,255,0.80) !important;
+    background-color: transparent;
 }

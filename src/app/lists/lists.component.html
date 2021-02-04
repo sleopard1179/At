@@ -1,10 +1,10 @@
-<ion-list [ngSwitch]="type">
+<ion-list [ngSwitch]="type" style="background-color: transparent;">
   <div id="sendContainer" *ngSwitchCase="0">
     <ion-list-header>
       Send Files and Photos
     </ion-list-header>
   
-    <ion-item>
+    <ion-item color="primary">
       <ion-grid>
         <ion-row>
           <ion-col>
@@ -22,10 +22,11 @@
       Connect Social Medias
     </ion-list-header>
   
-    <ion-item>
+    <ion-item color="primary">
       <ion-avatar slot="end">
         <!--PUT SOCIAL MEDIA LOGOS HERE-->
-        <img src="assets/profile-picture/profile-picture.png">
+        <!-- <img src="assets/profile-picture/profile-picture.png"> -->
+        <ion-icon name="logo-instagram"></ion-icon>
       </ion-avatar>
       <ion-label>
         <h2>Instagram</h2>
@@ -34,9 +35,21 @@
       </ion-label>
     </ion-item>
   
-    <ion-item>
+    <ion-item color="primary">
       <ion-avatar slot="end">
-        <img src="assets/profile-picture/profile-picture.png">
+        <!-- <img src="assets/profile-picture/profile-picture.png"> -->
+        <ion-icon name="logo-twitter"></ion-icon> 
+      </ion-avatar>
+      <ion-label>
+        <h2>Twitter</h2>
+        <h3>Status: Not Connected</h3>
+        <p>Twitter Link Here</p>
+      </ion-label>
+    </ion-item>
+    <ion-item color="primary">
+      <ion-avatar slot="end">
+        <!-- <img src="assets/profile-picture/profile-picture.png"> -->
+        <ion-icon name="logo-twitter"></ion-icon> 
       </ion-avatar>
       <ion-label>
         <h2>Twitter</h2>
