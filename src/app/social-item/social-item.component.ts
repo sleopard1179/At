@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-social-item',
@@ -8,25 +8,23 @@ import { Component, OnInit } from '@angular/core';
       <ion-avatar slot="end">
         <!--PUT SOCIAL MEDIA LOGOS HERE-->
         <!-- <img src="assets/profile-picture/profile-picture.png"> -->
-        <ion-icon name="logo-instagram"></ion-icon>
+        <ion-icon name="{{ icon }}"></ion-icon>
       </ion-avatar>
       <ion-label>
-        <h2>Instagram</h2>
-        <h3>Status: Not Connected | Connected This is Username</h3>
-        <p>Instagram Link Here</p>
+        <h2>{{ title }}</h2>
+        <h3>{{ status }}</h3>
+        <p>{{ link }}</p>
       </ion-label>
   </ion-item>
   `
 })
 export class SocialItemComponent implements OnInit {
 
-  var templateList = [
-    { title: 'Instagram',
-      status: 'Status: Not Connected',
-      link: '',
-      icon: 'logo-instagram'
-    }
-  ]
+  @Input() title: string;
+  @Input() status: string;
+  @Input() link: string;
+  @Input() icon: string;
+  @Input() isFilled: boolean;
 
   constructor() { }
 

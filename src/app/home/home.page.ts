@@ -19,7 +19,7 @@ import { ToastController } from '@ionic/angular'
 
   <ion-content [fullscreen]="true">
     <div id="bg"></div>
-    <div id="container">
+    <div id="container" slot="fixed">
       <app-cards [type]="0"></app-cards>
       <!--<strong>Ready to create an app?</strong>
       <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p> -->
@@ -39,6 +39,10 @@ export class HomePage {
   public nextPage(): void {
     this.testVar = 1;
     console.log('Testing Function');
+  }
+
+  public logScrollStart(): void {
+    console.log('Scroll Started');
   }
 
 }
