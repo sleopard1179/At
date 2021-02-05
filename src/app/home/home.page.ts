@@ -17,9 +17,9 @@ import { ToastController } from '@ionic/angular'
     </ion-toolbar>
   </ion-header>
 
-  <ion-content [fullscreen]="true">
+  <ion-content [fullscreen]="true" [scrollEvents]="true">
     <div id="bg"></div>
-    <div id="container" slot="fixed">
+    <div id="container">
       <app-cards [type]="0"></app-cards>
       <!--<strong>Ready to create an app?</strong>
       <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p> -->

@@ -21,8 +21,18 @@
     <ion-list-header>
       Connect Social Medias
     </ion-list-header>
-    <app-social-item *ngFor="let social of socials; index as i; first as isFirst" [title]="social.title" [status]="social.status" [link]="social.link" [icon]="social.icon" [isFilled]="social.isFilled">
-    </app-social-item>
+    <ion-item *ngFor="let social of socials">
+      <ion-avatar slot="end">
+        <ion-icon name="{{social.icon}}"></ion-icon>
+      </ion-avatar>
+      <ion-label>
+        <h2>{{social.title}}</h2>
+        <h3>{{social.status}}</h3>
+        <p>{{social.link}}</p>  
+      </ion-label>
+    </ion-item>
+    <!-- <app-social-item *ngFor="let social of socials; index as i; first as isFirst" [title]="social.title" [status]="social.status" [link]="social.link" [icon]="social.icon" [isFilled]="social.isFilled">
+    </app-social-item> -->
 
   </div>
 </ion-list>

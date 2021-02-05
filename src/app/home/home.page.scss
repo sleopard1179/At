@@ -1,4 +1,6 @@
-
+app-fabs {
+  z-index: 300 !important;
+}
 
 #right-bar-icon {
   width: 25%;
@@ -8,11 +10,11 @@
 #container {
   text-align: left;
 
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
-  top: 37%;
-  transform: translateY(-50%);
+  top: 8%;
+  // transform: translateY(-75%);
   // background-image: url('');
 }
 
