@@ -24,6 +24,9 @@ import { IonInfiniteScroll } from '@ionic/angular';
       <div *ngSwitchCase="2">
         <app-lists [type]="1"></app-lists>
       </div>
+      <div *ngSwitchCase="3">
+        <app-lists [type]="2"></app-lists>
+      </div>
     </ion-card>
   `
 })

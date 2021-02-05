@@ -8,10 +8,10 @@
       <ion-grid>
         <ion-row>
           <ion-col>
-            <ion-icon name="images-sharp"></ion-icon>
+            <ion-button expand="block" size="large" color="primary"><ion-icon name="images-sharp"></ion-icon></ion-button>
           </ion-col>
           <ion-col>
-            <ion-icon name="documents-sharp"></ion-icon>
+            <ion-button expand="block" size="large" color="primary"><ion-icon name="documents-sharp"></ion-icon></ion-button>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -19,17 +19,37 @@
   </div>
   <div *ngSwitchCase="1">
     <ion-list-header>
-      Connect Social Medias
+      Connect & Send Social Medias
     </ion-list-header>
-    <ion-item *ngFor="let social of socials" color="primary">
-      <ion-avatar slot="end">
-        <ion-icon name="{{social.icon}}"></ion-icon>
+    <ion-item *ngFor="let social of socials" color="primary" button="true">
+      <ion-avatar slot="start">
+        <ion-fab-button color="primary"><ion-icon name="{{social.icon}}"></ion-icon></ion-fab-button>
       </ion-avatar>
       <ion-label>
         <h2>{{social.title}}</h2>
         <h3>{{social.status}}</h3>
         <p>{{social.link}}</p>  
       </ion-label>
+    </ion-item>
+    <!-- <app-social-item *ngFor="let social of socials; index as i; first as isFirst" [title]="social.title" [status]="social.status" [link]="social.link" [icon]="social.icon" [isFilled]="social.isFilled">
+    </app-social-item> -->
+
+  </div>
+  <div *ngSwitchCase="2">
+    <ion-list-header>
+      Add & Send Business Card
+    </ion-list-header>
+    <ion-item color="primary">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-button expand="block" size="large" color="primary"><ion-icon id="contact-icon" name="mail-unread-outline"></ion-icon>Add Email Address</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button expand="block" size="large" color="primary"><ion-icon id="contact-icon" name="call-outline"></ion-icon>Add Phone Number</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-item>
     <!-- <app-social-item *ngFor="let social of socials; index as i; first as isFirst" [title]="social.title" [status]="social.status" [link]="social.link" [icon]="social.icon" [isFilled]="social.isFilled">
     </app-social-item> -->

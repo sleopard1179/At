@@ -36,12 +36,17 @@ app-fabs {
 #container a {
   text-decoration: none;
 }
-
+#menu-icon {
+  height: 50px;
+  width: 50px;
+  margin-top: 3%;
+}
 #bg {
   background-color: transparent;
   background-size: auto;
   width: 100%;
   height: 100%;
+  position: fixed;
 }
 
 // Iphone SE 

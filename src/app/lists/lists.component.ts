@@ -79,7 +79,7 @@ export class ListsComponent implements OnInit {
             title: 'Custom Link',
             status: 'Status: Not Connected',
             link: '',
-            icon: 'desktop-outline',
+            icon: 'globe-outline',
             isFilled: false
         }
     ];
