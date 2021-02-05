@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-fabs',
   styleUrls: ['./fabs.component.scss'],
   template: `
-  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+  <ion-fab *ngIf="isRight" horizontal="end" vertical="bottom">
     <ion-fab-button color="light">
       <!-- md="caret-up" ios="chevron-up-circle-outline"-->
       <ion-icon name="paper-plane-outline"></ion-icon>
@@ -32,9 +32,15 @@ import { Component, OnInit } from '@angular/core';
       </ion-fab-button>
     </ion-fab-list>
   </ion-fab>
+  <ion-fab *ngIf="!isRight" horizontal="start" vertical="bottom">
+    <ion-button expand="block" color="light">Send All</ion-button>
+  </ion-fab>
+  <!-- Send All Feature -->
   `
 })
 export class FabsComponent implements OnInit {
+
+  @Input() isRight: boolean;
 
   constructor() { }
 

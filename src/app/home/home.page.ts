@@ -26,7 +26,8 @@ import { ToastController } from '@ionic/angular'
       <app-cards [type]="1"></app-cards>
       <app-cards [type]="2"></app-cards>
     </div>
-    <app-fabs></app-fabs>
+    <app-fabs [isRight]="true"></app-fabs>
+    <app-fabs [isRight]="false"></app-fabs>
   </ion-content>
   `
 })
