@@ -10,7 +10,7 @@ ion-avatar {
 ion-list-header {
     font-size: 21px;
     font-weight: bolder;
-    color: #23B7FF;
+    color: #000000 !important;
 }
 #contact-icon {
     margin-right: 4%;
@@ -20,7 +20,44 @@ ion-list-header {
     text-align: center;
     background-color: transparent;
 }
+#logo-instagram {
+    -webkit-background-clip: text;
+            /* Also define standard property for compatibility */
+    background-clip: text;
+    border-radius: 16%;
+    -webkit-text-fill-color: transparent;
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    color: ghostwhite;
+}
+#logo-snapchat {
+    color: black;
+}
+#logo-facebook {
+    color: #3b5998;
+}
+#logo-linkedin {
+    color: #0077B5;
+}
+#logo-tiktok {
+    color: black;
+    text-shadow: (30px 10px 4px #EE1D52)
 
+}
+#logo-youtube {
+    color: #c4302b;
+}
+#logo-twitch {
+    color: #6441A5;
+}
+#logo-pinterest {
+    color: #c8232c
+}
+#globe-outline {
+    color: black;
+}
 ion-list {
     background-color: transparent;
 }

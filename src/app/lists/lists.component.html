@@ -23,7 +23,7 @@
     </ion-list-header>
     <ion-item *ngFor="let social of socials" color="primary" button="true">
       <ion-avatar slot="start">
-        <ion-fab-button color="primary"><ion-icon name="{{social.icon}}"></ion-icon></ion-fab-button>
+        <ion-fab-button color="primary"><ion-icon name="{{social.icon}}" id="{{social.icon}}"></ion-icon></ion-fab-button>
       </ion-avatar>
       <ion-label>
         <h2>{{social.title}}</h2>
