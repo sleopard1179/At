@@ -12,10 +12,17 @@ import { IonInfiniteScroll } from '@ionic/angular';
     <ion-card [ngSwitch]="type">
       <div *ngSwitchCase="0">
         <ion-card-header>
-          <img id="profilePicture" src="assets/profile-picture/profile-picture.png" alt="Profile Picture" />
-          <ion-card-title>
-            {{ this.userName }}
-          </ion-card-title>
+          <ion-grid>
+            <ion-row>
+              <ion-title class="profile-card-title"> Your Profile </ion-title>
+              <ion-chip class="profile-chip">
+                <ion-avatar class="profile-chip-avatar">
+                  <img src="../../assets/icon/favicon.png">
+                </ion-avatar>
+                <ion-label>{{ this.userName }}</ion-label>
+              </ion-chip>
+            </ion-row>
+          </ion-grid>
         </ion-card-header>
       </div>
       <div *ngSwitchCase="1">

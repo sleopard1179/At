@@ -33,7 +33,7 @@ import { Component, Input, OnInit } from '@angular/core';
     </ion-fab-list>
   </ion-fab>
   <ion-fab *ngIf="!isRight" horizontal="start" vertical="bottom">
-    <ion-button expand="block" color="light">Send All</ion-button>
+    <ion-button expand="block" color="secondary">Send All</ion-button>
   </ion-fab>
   <!-- Send All Feature -->
   `

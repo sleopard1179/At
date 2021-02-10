@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { MenuController, ToastController } from '@ionic/angular';
+import { AlertController, MenuController, ToastController, ModalController } from '@ionic/angular';
+import { AtmeMessagesComponent } from '../atme-messages/atme-messages.component';
 @Component({
   selector: 'app-home',
   styleUrls: ['home.page.scss'],
@@ -12,11 +13,11 @@ import { MenuController, ToastController } from '@ionic/angular';
     </ion-header>
     <ion-content>
       <ion-list>
-        <ion-item>
+        <ion-item (click)="presentInboxModal()">
           <ion-icon name="mail" slot="start"></ion-icon>
           <ion-label>Inbox</ion-label>
         </ion-item>
-        <ion-item>
+        <ion-item (click)="presentOutboxModal()">
           <ion-icon name="paper-plane" slot="start"></ion-icon>
           <ion-label>Outbox</ion-label>
         </ion-item>
@@ -34,21 +35,20 @@ import { MenuController, ToastController } from '@ionic/angular';
         <ion-menu-button (click)="open(menuClosed)"></ion-menu-button>
       </ion-buttons>
       <ion-buttons slot="end">
-        <ion-button>
-          <ion-icon slot="icon-only" name="magnet-sharp"></ion-icon>
+        <ion-button (click)="presentAlertConfirm()">
+          <ion-icon id="nfc-nav" slot="icon-only" name="magnet-sharp"></ion-icon>
         </ion-button>
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
 
   <ion-content [fullscreen]="true" [scrollEvents]="true">
-    <div id="bg"></div>
+    <div id="bg-home"></div>
     <div id="container">
       <app-cards [type]="0"></app-cards>
       <!--<strong>Ready to create an app?</strong>
       <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p> -->
       <app-cards [type]="1"></app-cards>
-      
       <app-cards [type]="2"></app-cards>
 
       <app-cards [type]="3"></app-cards>
@@ -62,8 +62,9 @@ export class HomePage {
 
   testVar = 0;
   menuClosed = false;
+  currentModal: ModalController;
 
-  constructor(private menu: MenuController) {}
+  constructor(private menu: MenuController, public alertController: AlertController, public modalController: ModalController) {}
 
   public nextPage(): void {
     this.testVar = 1;
@@ -72,6 +73,54 @@ export class HomePage {
 
   public logScrollStart(): void {
     console.log('Scroll Started');
+  }
+  async presentAlertConfirm() {
+    const alert = await this.alertController.create({
+      cssClass: 'nfc-alert-class',
+      header: 'Connecting NFC Tag',
+      message: 'Would you like to connect an NFC Tag?',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'nfc-cancel-class',
+          handler: (blah) => {
+            console.log('Confirm Cancel: blah');
+          }
+        }, {
+          text: 'Okay',
+          cssClass: 'nfc-okay-class',
+          handler: () => {
+            console.log('Confirm Okay');
+          }
+        }
+      ]
+    });
+
+    await alert.present();
+  }
+
+  async presentInboxModal() {
+    console.log('Pressing Inbox Modal');
+    const modal = await this.modalController.create({
+      component: AtmeMessagesComponent,
+      cssClass: 'atme-messages-class',
+      componentProps: {
+        type: '0'
+      }
+    });
+    return await modal.present();
+  }
+  async presentOutboxModal() {
+    console.log('Pressing Outbox Modal');
+    const modal = await this.modalController.create({
+      component: AtmeMessagesComponent,
+      cssClass: 'atme-messages-class',
+      componentProps: {
+        type: '1'
+      }
+    });
+    return await modal.present();
   }
   open(isOpen: boolean): void {
     console.log(isOpen);

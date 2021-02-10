@@ -9,6 +9,7 @@ import { CardsComponent } from '../cards/cards.component';
 import { FabsComponent } from '../fabs/fabs.component';
 import { ListsComponent } from '../lists/lists.component';
 import { SocialItemComponent } from '../social-item/social-item.component';
+import { AtmeMessagesComponent } from '../atme-messages/atme-messages.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { SocialItemComponent } from '../social-item/social-item.component';
     CardsComponent,
     FabsComponent,
     ListsComponent,
-    SocialItemComponent
+    SocialItemComponent,
+    AtmeMessagesComponent
   ]
 })
 export class HomePageModule {}

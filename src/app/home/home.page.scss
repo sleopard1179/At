@@ -41,41 +41,65 @@ app-fabs {
   width: 50px;
   margin-top: 3%;
 }
-#bg {
+ion-menu-button {
+  color: black !important;
+}
+#nfc-nav {
+  color: black !important;
+}
+.nfc-alert-class {
+  color: secondary;
+}
+.nfc-cancel-class {
+  color: white !important;
+  background-color: #23B7FF !important;
+}
+.nfc-okay-class {
+  color: white !important;
+  background-color: #23B7FF !important;
+}
+.atme-messages-class .modal-wrapper {
+  background: #222;
+}
+span {
+  color: black !important;
+}
+#bg-home {
   background-color: transparent;
-  background-size: auto;
+  background-size: cover;
+  position: fixed;
   width: 100%;
   height: 100%;
-  position: fixed;
+  // position: inherit;
 }
 
 // Iphone SE 
 @media screen and (max-width: 359px) and (min-width: 320px) {
-  #bg {
+  #bg-home {
     background-image: url('https://firebasestorage.googleapis.com/v0/b/at-me-app.appspot.com/o/bg-jpg%2Fiphonese.jpg?alt=media&token=48658426-62cd-4735-885d-2f355dc1b07a');
   }
 }
 // Android
 @media screen and (max-width: 374px) and (min-width: 360px) {
-  #bg {
+  #bg-home {
     background-image: url('https://firebasestorage.googleapis.com/v0/b/at-me-app.appspot.com/o/bg-jpg%2Fandroid.jpg?alt=media&token=05c0a97e-b0ba-49ae-ad7d-df99efec5f36');
   }
 }
 // Iphone 8 Plus and 8
 @media screen and (max-width: 410px) and (min-width: 375px) {
-  #bg {
+  #bg-home {
     background-image: url('https://firebasestorage.googleapis.com/v0/b/at-me-app.appspot.com/o/bg-jpg%2Fiphone8.jpg?alt=media&token=00bf04fd-1ede-4b49-b909-75be84414a5e');
   }
 }
 // Google Pixel 2 and XL
 @media screen and (max-width: 413px) and (min-width: 411px) {
-  #bg {
+  #bg-home {
     background-image: url('https://firebasestorage.googleapis.com/v0/b/at-me-app.appspot.com/o/bg-jpg%2Fpixel2.jpg?alt=media&token=bf360514-403b-432b-81f5-1e749b489d86');
   }
 }
 // Iphone 11 Pro and 8 Plus
 @media screen and (min-width: 414px) {
-  #container {
+  #bg-home {
     background-image: url('https://firebasestorage.googleapis.com/v0/b/at-me-app.appspot.com/o/bg-jpg%2Fiphone8-plus.jpg?alt=media&token=08130390-760a-4f58-8adc-89b690e653f9');
   }
 }
