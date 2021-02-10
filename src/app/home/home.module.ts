@@ -10,6 +10,8 @@ import { FabsComponent } from '../fabs/fabs.component';
 import { ListsComponent } from '../lists/lists.component';
 import { SocialItemComponent } from '../social-item/social-item.component';
 import { AtmeMessagesComponent } from '../atme-messages/atme-messages.component';
+import { ProfileModalComponent } from '../profile-modal/profile-modal.component';
+import { BuyModalComponent } from '../buy-modal/buy-modal.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { AtmeMessagesComponent } from '../atme-messages/atme-messages.component'
     FabsComponent,
     ListsComponent,
     SocialItemComponent,
-    AtmeMessagesComponent
+    AtmeMessagesComponent,
+    ProfileModalComponent,
+    BuyModalComponent
   ]
 })
 export class HomePageModule {}

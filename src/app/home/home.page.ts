@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { AlertController, MenuController, ToastController, ModalController } from '@ionic/angular';
 import { AtmeMessagesComponent } from '../atme-messages/atme-messages.component';
+import { BuyModalComponent } from '../buy-modal/buy-modal.component';
+import { ProfileModalComponent } from '../profile-modal/profile-modal.component';
 @Component({
   selector: 'app-home',
   styleUrls: ['home.page.scss'],
@@ -21,8 +23,12 @@ import { AtmeMessagesComponent } from '../atme-messages/atme-messages.component'
           <ion-icon name="paper-plane" slot="start"></ion-icon>
           <ion-label>Outbox</ion-label>
         </ion-item>
-        <ion-item>
+        <ion-item (click)="presentProfileModal()">
           <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+          <ion-label>Profile & Settings</ion-label>
+        </ion-item>
+        <ion-item (click)="presentBuyModal()">
+          <ion-icon name="bag-add-outline" slot="start"></ion-icon>
           <ion-label>Profile & Settings</ion-label>
         </ion-item>
       </ion-list>
@@ -36,7 +42,7 @@ import { AtmeMessagesComponent } from '../atme-messages/atme-messages.component'
       </ion-buttons>
       <ion-buttons slot="end">
         <ion-button (click)="presentAlertConfirm()">
-          <ion-icon id="nfc-nav" slot="icon-only" name="magnet-sharp"></ion-icon>
+          <ion-icon id="nfc-nav" slot="icon-only" name="id-card-outline"></ion-icon>
         </ion-button>
       </ion-buttons>
     </ion-toolbar>
@@ -116,6 +122,26 @@ export class HomePage {
     const modal = await this.modalController.create({
       component: AtmeMessagesComponent,
       cssClass: 'atme-messages-class',
+      componentProps: {
+        type: '1'
+      }
+    });
+    return await modal.present();
+  }
+
+  async presentProfileModal() {
+    console.log('Pressing Outbox Modal');
+    const modal = await this.modalController.create({
+      component: ProfileModalComponent,
+      cssClass: 'atme-profile-class'
+    });
+    return await modal.present();
+  }
+  async presentBuyModal() {
+    console.log('Pressing Outbox Modal');
+    const modal = await this.modalController.create({
+      component: BuyModalComponent,
+      cssClass: 'atme-buy-class',
       componentProps: {
         type: '1'
       }
