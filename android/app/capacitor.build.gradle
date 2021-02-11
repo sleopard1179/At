@@ -16,6 +16,7 @@ dependencies {
     implementation "com.google.firebase:firebase-config:+"
     implementation "com.google.firebase:firebase-perf:+"
     implementation "com.google.firebase:firebase-auth:20.0.+"
+    implementation "com.stripe:stripe-android:4.1.2"
 }
 apply from: "../../node_modules/cordova-plugin-firebase/src/android/build.gradle"
 

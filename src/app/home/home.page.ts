@@ -29,7 +29,7 @@ import { ProfileModalComponent } from '../profile-modal/profile-modal.component'
         </ion-item>
         <ion-item (click)="presentBuyModal()">
           <ion-icon name="bag-add-outline" slot="start"></ion-icon>
-          <ion-label>Profile & Settings</ion-label>
+          <ion-label>Buy @Me Tag</ion-label>
         </ion-item>
       </ion-list>
     </ion-content>
@@ -42,7 +42,7 @@ import { ProfileModalComponent } from '../profile-modal/profile-modal.component'
       </ion-buttons>
       <ion-buttons slot="end">
         <ion-button (click)="presentAlertConfirm()">
-          <ion-icon id="nfc-nav" slot="icon-only" name="id-card-outline"></ion-icon>
+          <ion-icon id="nfc-nav" slot="icon-only" name="journal-outline"></ion-icon>
         </ion-button>
       </ion-buttons>
     </ion-toolbar>
@@ -89,13 +89,11 @@ export class HomePage {
         {
           text: 'Cancel',
           role: 'cancel',
-          cssClass: 'nfc-cancel-class',
           handler: (blah) => {
             console.log('Confirm Cancel: blah');
           }
         }, {
           text: 'Okay',
-          cssClass: 'nfc-okay-class',
           handler: () => {
             console.log('Confirm Okay');
           }

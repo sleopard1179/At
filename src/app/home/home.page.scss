@@ -50,16 +50,20 @@ ion-menu-button {
 .nfc-alert-class {
   color: secondary;
 }
-.nfc-cancel-class {
+.nfc-cancel-class .modal-wrapper {
   color: white !important;
   background-color: #23B7FF !important;
 }
-.nfc-okay-class {
+.nfc-okay-class .modal-wrapper {
   color: white !important;
   background-color: #23B7FF !important;
 }
 .atme-messages-class .modal-wrapper {
   background: #222;
+
+}
+.atme-messages-class .modal-wrapper .alert-button-group {
+  background-color: #23B7FF;
 }
 .atme-profile-class .modal-wrapper {
   background: #222;

@@ -1,0 +1,34 @@
+.buy-title-card ion-card-title {
+    color: rgba(35, 183, 255, 1) !important;
+}
+.buy-title-card ion-card-subtitle {
+    color: rgba(35, 183, 255, 1) !important;
+}
+
+.buy-title-card {
+    background-color: rgba(248,248,255,0.80) !important;
+    color:rgba(35, 183, 255, 1)
+}
+.buy-shipping-card {
+    top: 4% !important;
+    background-color: rgba(248,248,255,0.80) !important;
+}
+.buy-shipping-card ion-item {
+    border-radius: 16%;
+    border-color: black;
+    border-width: 8px;
+    border-style: double;
+    overflow: hidden;
+}
+#payment-button {
+    margin-top: 25% !important;
+}
+ion-row {
+    font-size: 12px !important;
+}
+#address-two {
+    font-size: 12px;
+}
+ion-content {
+    top: 4%;
+}

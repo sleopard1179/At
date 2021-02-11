@@ -8,7 +8,7 @@
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #23B7FF;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #23B7FF;
+  --ion-color-primary-shade: rgba(35, 183, 255, 0.5);
   --ion-color-primary-tint: #4c8dff;
 
   /** secondary **/
@@ -75,7 +75,9 @@
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
 }
-
+.alert-button {
+  color: black !important;
+}
 @media (prefers-color-scheme: dark) {
   /*
    * Dark Colors
